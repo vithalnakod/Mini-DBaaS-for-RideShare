@@ -1,0 +1,14 @@
+version: '3'
+services:
+  web1.1:
+    build: ./users
+    image: users:latest
+    restart: always
+    ports: 
+      - "8080:80"
+  web1.2:
+    build: ./rides
+    image: rides:latest
+    restart: always
+    ports:
+      - "8000:80"
